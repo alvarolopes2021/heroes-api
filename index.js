@@ -3,7 +3,6 @@ const express = require('express');
 
 // MY MODULES IMPORT
 const constants = require('./constants');
-const systemServices = require('./services/systemService');
 
 // VARIABLES
 const app = express();

@@ -12,7 +12,19 @@ async function getHeroes(res){
 
 async function insertHero(req, res){
     try{
-        const hero = new HeroModel({name: "Spider Man", group: "Avengers", comicBook: "Marvel", releaseYear: "1956"});
+        let object = {
+            name: "",
+            group: "",
+            comicBook: "",
+            releaseYear: 0
+        }
+
+        object.name = req.body.name;
+        object.group = req.body.group;
+        object.comicBook = req.body.comicBook;
+        object.releaseYear = req.body.releaseYear;
+        
+        const hero = new HeroModel(object);
         await hero.save();
         res.status(201).send("OK");
     }
