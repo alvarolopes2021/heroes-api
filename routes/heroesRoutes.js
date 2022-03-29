@@ -22,4 +22,4 @@ router.post('/insert-hero', async (req, res) => {
     }
 });
 
-module.exports = app => app.use('/heroes')
+module.exports = app => app.use('/heroes', router);

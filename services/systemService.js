@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-
-async function onStartUp(){
+async function onStartUp(mongoose){
     try{
         
     }

@@ -1,12 +1,14 @@
-const mongoose = require("mongoose");
+const mongoose = require('./../daos/connection');
 
-const heroSchema = mongoose.Schema({
+var Schema = mongoose.Schema;
+
+const schema = new Schema({
     name: "string",
     group: "string",
     comicBook: "string",
-    releaseYear: "int"
+    releaseYear: "number"
 });
 
-const Heroes = mongoose.model('Heroes', heroSchema);
+const Hero = mongoose.model('Heroes', schema);
 
-module.exports = Heroes
+module.exports = Hero;
