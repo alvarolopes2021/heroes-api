@@ -17,6 +17,12 @@
 * [Express](https://expressjs.com/pt-br/)
 * [Mongoose](https://mongoosejs.com/)
 
+#### 🍃 Criando o banco de dados
+
+1. Baixe o MongoDB server community do link de Techs 
+2. Instale o MongoDB Compass, para ter uma visualização melhor dos dados [Compass](https://www.mongodb.com/products/compass)
+3. Crie uma conexão localhost utilizando o Compass (a porta padrão do MongoDB será a 27017)
+
 #### ▶	 Executando o servidor
 
 > Confira se as instalações foram bem sucedidas
@@ -33,7 +39,6 @@
 
 ```
 	git clone https://github.com/alvarolopes2021/heroes-api.git 
-
 ```
 
 2. Com o repositório clonado
