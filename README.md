@@ -84,3 +84,31 @@
 
 > Este comando irá buscar todos os heróis na sua collection *heroes*
 
+> A resposta desta requisição será um Array de objetos, com os seguintes campos:
+
+1. _id -> id do herói (padrão do MongoDB)
+2. name: "string" -> nome do herói
+3. group: "string" -> equipe que pertence (Avengers)
+4. comicBook: "string" -> qual empresa ele pertence (Marvel)
+5. releaseYear: "number" -> ano de lançamento
+
+```
+[
+   {
+    "_id":"62438cac5843b079965bb31c",
+    "name":"Batman",
+    "group":"Justice League",
+    "comicBook":"DC",
+    "releaseYear":1940
+   },
+   {
+    "_id":"62438ccb5843b079965bb31e",
+    "name":"Captain America",
+    "group":"Avengers",
+    "comicBook":"Marvel",
+    "releaseYear":1942
+   }
+]
+```
+
+#### 🙏 Obrigado
