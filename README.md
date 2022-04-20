@@ -1,4 +1,7 @@
 ## NodeJs API - Heroes
+
+![CI](https://github.com/alvarolopes2021/heroes-api/actions/workflows/node.js.yml/badge.svg)
+
 ---
 
 ### Simples backend utilizando NodeJs e MongoDB
