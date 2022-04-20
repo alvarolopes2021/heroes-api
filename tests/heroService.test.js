@@ -7,3 +7,4 @@ test('tests if age is positive', () => {
 test('tests the negative release year', () => {
     expect(findsHeroReleaseAge("2024")).toBeLessThan(-1);
 });
+ 
