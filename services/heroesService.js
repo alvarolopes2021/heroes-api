@@ -4,6 +4,7 @@ async function getHeroes(res){
     try{
         let heroes = await HeroModel.find();
         res.status(200).send(JSON.stringify(heroes));
+        return heroes;
     }
     catch(e){
         console.log(e);
@@ -34,7 +35,19 @@ async function insertHero(req, res){
     }
 }
 
+function findsHeroReleaseAge(releaseYear){
+    try{
+        return (new Date().getFullYear() - parseInt(releaseYear));
+    }
+    catch(e){
+        console.log(e);
+        res.status(400).send("error");
+    }
+}
+
 module.exports = {
     getHeroes: getHeroes,
-    insertHero: insertHero
+    insertHero: insertHero,
+    findsHeroReleaseAge: findsHeroReleaseAge,
+    findsHeroReleaseAge: findsHeroReleaseAge
 }
