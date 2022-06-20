@@ -13,6 +13,15 @@ router.get('/all-heroes', async (req, res) => {
     }
 });
 
+router.get('/hero-detail', async (req, res) => {
+    try{
+        heroesService.getHeroDetail(req, res);
+    }
+    catch(e){
+        console.log(e);
+    }
+});
+
 router.post('/insert-hero', async (req, res) => {
     try{
         heroesService.insertHero(req, res);

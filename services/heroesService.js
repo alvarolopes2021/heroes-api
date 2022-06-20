@@ -13,6 +13,17 @@ async function getHeroes(res){
     }
 }
 
+async function getHeroDetail(req, res){
+    try{
+        let hero = await HeroModel.find({heroid: req.query.HERO});
+        res.status(200).send(JSON.stringify(hero[0]));
+        return hero;
+    }
+    catch(e){
+        console.log(e);
+    }
+}
+
 async function insertHero(req, res){
     try{
         let object = {
@@ -61,10 +72,12 @@ async function updateHeroService(req, res){
         let heroes = await HeroModel.updateOne({heroid: object.heroid}, {
             name: object.name,
             group: object.group,
-            weapon: object.weapon
+            weapon: object.weapon,
+            profilepic: object.profilepic,
+            backgroundimage: object.backgroundimage
         });
 
-        res.status(200).send();
+        res.status(200).send(object);
 
         return;
     }
@@ -116,5 +129,6 @@ module.exports = {
     insertHero: insertHero,
     findsHeroReleaseAge: findsHeroReleaseAge,
     deleteHeroService: deleteHeroService,
-    updateHeroService: updateHeroService
+    updateHeroService: updateHeroService,
+    getHeroDetail: getHeroDetail
 }

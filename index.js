@@ -20,6 +20,8 @@ app.use(function (req, res, next) {
 
 // ROUTES
 require('./routes/heroesRoutes')(app);
+require('./routes/companyRoutes')(app);
+
 
 
 // STARTS THE SERVER
