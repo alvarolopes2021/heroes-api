@@ -22,4 +22,22 @@ router.post('/insert-hero', async (req, res) => {
     }
 });
 
+router.put('/update-hero', async (req, res) => {
+    try{
+        heroesService.updateHeroService(req, res);
+    }
+    catch(e){
+        console.log(e);
+    }
+});
+
+router.post('/delete-hero', async (req, res) => {
+    try{
+        heroesService.deleteHeroService(req, res);
+    }
+    catch(e){
+        console.log(e);
+    }
+});
+
 module.exports = app => app.use('/heroes', router);

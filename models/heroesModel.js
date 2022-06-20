@@ -3,10 +3,14 @@ const mongoose = require('./../daos/connection');
 var Schema = mongoose.Schema;
 
 const schema = new Schema({
+    heroid: "string",
     name: "string",
     group: "string",
-    comicBook: "string",
-    releaseYear: "number"
+    weapon: "string",
+    comicbook: "string",
+    releaseyear: "number",    
+    profilepic: "string",
+    backgroundimage: "string"
 });
 
 const Hero = mongoose.model('Heroes', schema);
