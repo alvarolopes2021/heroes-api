@@ -70,7 +70,7 @@
 
 1. Inserindo um herói
 ```
-	curl -X POST -H "Content-Type: application/json" -d '{"name": "Captain America", "group": "Avengers", "comicBook": "Marvel", "releaseYear": 1942 }' http://localhost:3000/heroes/insert-hero
+	curl -X POST -H "Content-Type: application/json" -d '{"name": "Captain America", "group": "Avengers", "weapon": "Shield", "releaseYear": 1942 }' http://localhost:3000/heroes/insert-hero
 ```
 
 > Isto fará com que o personagem Capitão América seja inserido no seu banco local
@@ -101,14 +101,14 @@
     "_id":"62438cac5843b079965bb31c",
     "name":"Batman",
     "group":"Justice League",
-    "comicBook":"DC",
+    "weapon":"Money",
     "releaseYear":1940
    },
    {
     "_id":"62438ccb5843b079965bb31e",
     "name":"Captain America",
     "group":"Avengers",
-    "comicBook":"Marvel",
+    "weapon":"Shield",
     "releaseYear":1942
    }
 ]
