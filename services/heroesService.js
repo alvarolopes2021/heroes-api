@@ -60,7 +60,8 @@ async function updateHeroService(req, res){
             group: "",
             weapon: "",
             profilepic: "",
-            backgroundimage: ""
+            backgroundimage: "",
+            companyid: ""
         }
         object.heroid = req.body.heroid;
         object.name = req.body.name;
@@ -68,13 +69,15 @@ async function updateHeroService(req, res){
         object.weapon = req.body.weapon;
         object.profilepic = req.body.profilepic;
         object.backgroundimage = req.body.backgroundimage;
+        object.companyid = req.body.companyid
 
         let heroes = await HeroModel.updateOne({heroid: object.heroid}, {
             name: object.name,
             group: object.group,
             weapon: object.weapon,
             profilepic: object.profilepic,
-            backgroundimage: object.backgroundimage
+            backgroundimage: object.backgroundimage,
+            companyid: object.companyid
         });
 
         res.status(200).send(object);
@@ -89,19 +92,9 @@ async function updateHeroService(req, res){
 async function deleteHeroService(req, res){
     try{
         let object = {
-            heroid: "",
-            name: "",
-            group: "",
-            weapon: "",
-            profilepic: "",
-            backgroundimage: ""
+            heroid: ""
         }
         object.heroid = req.body.heroid;
-        object.name = req.body.name;
-        object.group = req.body.group;
-        object.weapon = req.body.weapon;
-        object.profilepic = req.body.profilepic;
-        object.backgroundimage = req.body.backgroundimage;
 
         let heroes = await HeroModel.deleteOne({heroid: object.heroid});
 

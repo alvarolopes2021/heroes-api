@@ -8,6 +8,7 @@ const schema = new Schema({
     group: "string",
     weapon: "string",
     comicbook: "string",
+    companyid: "string",
     releaseyear: "number",    
     profilepic: "string",
     backgroundimage: "string"
